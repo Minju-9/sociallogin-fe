@@ -1,0 +1,125 @@
+/* 전체 컨테이너 */
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  border: none; 
+  box-shadow: none;
+}
+
+/* 왼쪽 로고 영역 */
+.logo-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.logo-box {
+  margin-bottom: 60px;
+}
+
+.mobile-logo-image-sejong {
+  width: 200px;
+  height: auto;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.mobile-logo-title {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+/* 오른쪽 로그인 영역 */
+.login-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* 공통 로그인 버튼 */
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  height: 48px;
+  padding: 0 16px;
+  margin-bottom: 15px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* 아이콘 박스 */
+.icon-box {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 32px;
+  margin-left: 20px;
+  border-radius: 4px;
+}
+
+.btn-naver .icon-box {
+  background-image: url("/naver-icon.png");
+}
+
+.btn-kakao .icon-box {
+  background-image: url("/kakao-icon.png");
+}
+
+.btn-facebook .icon-box {
+  background-image: url("/facebook-icon.png");
+}
+
+.btn-google .icon-box {
+  background-image: url("/google-icon.png");
+}
+
+/* 버튼 색상 */
+.btn-naver {
+  background-color: #5FCC3D;
+  color: white;
+}
+
+.btn-kakao {
+  background-color: #EDDC65;
+  color: #3c1e1e;
+}
+
+.btn-facebook {
+  background-color: #3670DF;
+  color: white;
+}
+
+.btn-google {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* 안내 문구 */
+.login-notice {
+  font-size: 10px;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.4;
+}

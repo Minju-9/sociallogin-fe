@@ -1,0 +1,189 @@
+.mobile-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.mobile-logo-section {
+  text-align: center;
+  margin-bottom: 160px;
+  
+}
+
+.mobile-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.mobile-logo-image-sejong {
+  width: 250px;
+  height: auto;
+}
+
+.mobile-logo-image-maintext {
+  width: 220px;
+  height: auto;
+}
+
+.mobile-logo-image-subtext {
+  width: 180px;
+  height: auto;
+  opacity: 0.6;
+}
+
+.mobile-logo-text {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mobile-login-buttons {
+  width: 100%;
+}
+
+.mobile-login-footer {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.mobile-social-login-button {
+  font-family: inherit;
+}
+
+
+/* dash */
+
+.mobile-dashboard {
+  padding: 20px;
+  padding-top: 0;
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.mobile-searchbar {
+  display: flex;
+  margin: 16px 0;
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: 14px 20px;
+  margin-right: 10px;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  outline: none;
+  transition: box-shadow 0.2s ease;
+  color: #333;
+}
+
+.mobile-search-input::placeholder {
+  color: #bbb;
+  font-weight: 500;
+}
+
+.mobile-search-input:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-search-button {
+  padding: 6px 24px;
+  background-color: #133960;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.mobile-user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-user-card {
+  display: flex;
+  padding: 16px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  align-items: flex-start; /* 위쪽 정렬 */
+  gap: 14px;
+}
+
+.mobile-user-index-box {
+  background-color: #133960;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 30px;
+  text-align: center;
+  height: fit-content;
+}
+
+.mobile-user-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.mobile-user-name {
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+.mobile-user-desc,
+.mobile-user-email,
+.mobile-user-id {
+  font-size: 13px;
+  color: #555;
+}
+
+
+/* dash header */
+.mobile-mini-header {
+  width: 100vw; /* ← 화면 전체 너비로 설정 */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+}
+
+.mobile-mini-logo {
+  height: 30px;
+  object-fit: contain;
+}
+
+.mobile-mini-logotext {
+  height: 13px;
+  margin-left: 8px;
+}
+
+.mobile-logo-search {
+  height: 33px;
+
+}
