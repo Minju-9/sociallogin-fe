@@ -8,9 +8,9 @@ export default function MobileDashboard() {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // ✅ 백엔드 데이터 불러오기
+  // ✅ 백엔드 데이터 불러오기 (배포 URL 적용)
   useEffect(() => {
-    fetch('http://localhost:8083/admin/users', {
+    fetch('https://sociallogin-tyc7.onrender.com/admin/users', {
       credentials: 'include', // 로그인 세션 유지
     })
       .then((res) => res.json())

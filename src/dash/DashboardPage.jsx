@@ -17,9 +17,12 @@ export default function DashboardPage() {
 
   const itemsPerPage = 9;
 
+  // ✅ 배포된 백엔드 URL
+  const API_BASE_URL = "https://sociallogin-tyc7.onrender.com";
+
   // ✅ 현재 로그인 사용자 정보 가져오기
   useEffect(() => {
-    fetch("http://localhost:8083/auth/user", {
+    fetch(`${API_BASE_URL}/auth/user`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -35,10 +38,13 @@ export default function DashboardPage() {
   useEffect(() => {
     const keywordParam = searchTerm.trim() ? `&keyword=${searchTerm}` : '';
 
-    fetch(`http://localhost:8083/admin/users?page=${currentPage - 1}&size=${itemsPerPage}${keywordParam}`, {
-      method: 'GET',
-      credentials: 'include',
-    })
+    fetch(
+      `${API_BASE_URL}/admin/users?page=${currentPage - 1}&size=${itemsPerPage}${keywordParam}`,
+      {
+        method: 'GET',
+        credentials: 'include',
+      }
+    )
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP 오류! 상태: ${res.status}`);
         return res.json();

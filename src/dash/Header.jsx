@@ -3,8 +3,11 @@ import React, { useEffect, useState } from 'react';
 function Header({ toggleSidebar, toggleUserMenu, userMenuOpen }) {
   const [userName, setUserName] = useState("Loading...");
 
+  // ✅ 배포된 백엔드 URL
+  const BASE_URL = "https://sociallogin-tyc7.onrender.com";
+
   useEffect(() => {
-    fetch("http://localhost:8083/auth/user", {
+    fetch(`${BASE_URL}/auth/user`, {
       method: "GET",
       credentials: "include",
     })
