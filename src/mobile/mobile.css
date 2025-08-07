@@ -187,3 +187,39 @@
   height: 33px;
 
 }
+
+.mobile-social-login-button {
+  position: relative;
+  padding-left: 20px; /* 아이콘 공간 확보 */
+  justify-content: center;
+}
+
+.mobile-social-login-button::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 소셜별 아이콘 연결 */
+.btn-naver::before {
+  background-image: url("/naver-icon.png");
+}
+
+.btn-kakao::before {
+  background-image: url("/kakao-icon.png");
+}
+
+.btn-facebook::before {
+  background-image: url("/facebook-icon.png");
+}
+
+.btn-google::before {
+  background-image: url("/google-icon.png");
+}

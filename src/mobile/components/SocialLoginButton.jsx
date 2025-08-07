@@ -1,9 +1,10 @@
 import React from 'react';
+import "../mobile.css";
 
 const buttonStyleMap = {
-  naver: { bg: '#1EC800', text: '네이버 계정으로 로그인' },
-  kakao: { bg: '#FEE500', text: '카카오 계정으로 로그인', color: '#3C1E1E' },
-  facebook: { bg: '#1877F2', text: '페이스북 계정으로 로그인' },
+  naver: { bg: '#5FCC3D', text: '네이버 계정으로 로그인' },
+  kakao: { bg: '#EDDC65', text: '카카오 계정으로 로그인', color: '#3C1E1E' },
+  facebook: { bg: '#3670DF', text: '페이스북 계정으로 로그인' },
   google: { bg: '#FFFFFF', text: '구글 계정으로 로그인', color: '#000000', border: '1px solid #ccc' },
 };
 
@@ -11,13 +12,13 @@ export default function SocialLoginButton({ type }) {
   const style = buttonStyleMap[type];
 
   const handleLogin = () => {
-    const baseUrl = "https://sociallogin-tyc7.onrender.com/oauth2/authorization"; // ✅ 배포 URL
+    const baseUrl = "https://sociallogin-tyc7.onrender.com/oauth2/authorization";
     window.location.href = `${baseUrl}/${type}`;
   };
 
   return (
     <button
-      className="mobile-social-login-button"
+      className={`mobile-social-login-button btn-${type}`}
       style={{
         backgroundColor: style.bg,
         color: style.color || 'white',
