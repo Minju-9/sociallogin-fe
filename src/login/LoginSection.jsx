@@ -2,7 +2,7 @@ import React from 'react';
 
 function LoginButton({ className, text, onClick }) {
   return (
-    <button className={`login-button ${className}`} onClick={onClick}>
+    <button type="button" className={`login-button ${className}`} onClick={onClick}>
       <div className="icon-box" />
       <span>{text}</span>
     </button>
@@ -24,10 +24,10 @@ export default function LoginSection() {
     }
 
     if (isMobile()) {
-      // ✅ 모바일: 현재 탭 이동
+      // 모바일: 현재 탭 이동
       window.location.href = url;
     } else {
-      // ✅ 데스크톱: 팝업(차단되면 현재 탭)
+      // 데스크톱: 팝업(차단되면 현재 탭)
       const w = window.open(url, "_blank", "noopener");
       if (!w) window.location.href = url;
     }
@@ -36,16 +36,25 @@ export default function LoginSection() {
   return (
     <div className="login-section">
       <h2>Login</h2>
+
       <LoginButton
         className="btn-naver"
         text="네이버 계정으로 로그인"
         onClick={() => handleLogin("naver")}
       />
-      <LoginButton
-        className="btn-kakao"
-        text="카카오 계정으로 로그인"
-        onClick={() => handleLogin("kakao")}
-      />
+
+      {/* ✅ 카카오는 a 태그로 현재 탭 이동 (모바일 안정) */}
+      <a
+        className="login-button btn-kakao"
+        href={`${BASE_URL}/oauth2/authorization/kakao`}
+        style={{
+          display:'block', width:'80%', height:48, margin:'8px auto',
+          borderRadius:999, fontWeight:'bold', textAlign:'center', lineHeight:'48px'
+        }}
+      >
+        카카오 계정으로 로그인
+      </a>
+
       <LoginButton
         className="btn-facebook"
         text="페이스북 계정으로 로그인"
