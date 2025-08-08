@@ -1,6 +1,6 @@
 // src/mobile/components/SocialLoginButton.jsx
 import React from "react";
-import "../../mobile.css";
+import "../mobile.css";
 
 const API_BASE = import.meta.env?.VITE_API_BASE ?? "https://sociallogin-tyc7.onrender.com";
 
